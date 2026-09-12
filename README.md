@@ -23,3 +23,12 @@
   Click on "Commit & Push"
 
 # how download the game (for testing)
+  Click on the green Code button.\
+  Click on download zip file\
+  Copy the zip file to your ren'py directory\
+    To find your ren'py repository:\
+      Open Ren'py and click on preferences (in the bottom right corner)\
+      The directory should be listed under "Projects Directory"\
+  Unzip the file (feel free to now delete the zip file)
+  In Ren'py, click "refresh". The name of the game should now show up for you to click on and play.
+      
