@@ -1,4 +1,4 @@
-#Important things to do when working on the code
+# Important things to do when working on the code
   Do a "pull" command before you start working on the code. 
     This is how you refresh the code in order to show any changes other members have recently made.
   For Codespace, click on the source control button on the left sidebar. Then click on the 3 dots.
