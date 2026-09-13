@@ -6,7 +6,7 @@
   Click on the extensions button on the left sidebar. Add the "Python" and "ren'py" extension\
   You can pull up the renpy tutorial on the side, the instructions there are compatible w Codespace.
 
-  To work on it from your local machine:
+  To work on it from your local machine:\
   Choose your IDE of choice (I prefer VSE)\
   Download git to your computer's terminal\
   You'll need to read some tutorials on how to setup git and connect your computer to the github repository\
