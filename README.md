@@ -27,7 +27,7 @@
   Click on the green Code button\
   Click on download zip file\
   Copy the zip file to your ren'py directory\
-    To find your ren'py repository:\
+    To find your ren'py directory:\
       Open Ren'py and click on preferences (in the bottom right corner)\
       The directory should be listed under "Projects Directory"\
   Unzip the file (feel free to now delete the zip file)\
