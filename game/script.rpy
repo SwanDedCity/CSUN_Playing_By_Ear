@@ -1,9 +1,9 @@
-﻿# The script of the game goes in this file.
+﻿# The main script of the game goes in this file.
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define e = Character("Eileen")
+define c = Character("Chase")
 
 
 # The game starts here.
@@ -24,18 +24,18 @@ label start:
 
     # These display lines of dialogue.
 
-    e "This is the beginning of the template."
+    c "This is the beginning of the template."
 
-    e "And now it's over. LOL. Now the actual game begins"
+    c "And now it's over. LOL. Now the actual game begins"
 
     # This ends the game.
 
-    jump(scene1_start)
+    jump scene1_start
 
 
 
 label endGame:
     
     "The game is over. Thanks for playing!"
-    
+
     return
