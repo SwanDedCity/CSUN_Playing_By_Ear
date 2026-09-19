@@ -42,9 +42,13 @@ label scene1_start:
 
 # scene 1.1 script starts here
     scene restroom with fade
+    play music "bathroom.mp3"
 
     "The stillness of the concert hall's restroom was broken by the loud bang of the door flying open."
     "Chase came to a pristinely clean faucet in the middle." 
+
+    play sound "sink.mp3"
+
     "He began to wash his face, a lack of care for the mess he was making on his jacket."
 
     c "That was brutal."
@@ -107,6 +111,9 @@ label scene1_start:
     "The woman sighs loudly"
 
     w "Ah, I'm glad to hear. No, I'm sorry. It's no surprise you don't recognize me since we haven't met since you and Timmy left."
+
+    stop music
+    stop sound
 
     "{i}Timmy{/i}"
 
