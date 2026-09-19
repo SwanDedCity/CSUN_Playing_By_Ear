@@ -24,10 +24,18 @@ label start:
 
     # These display lines of dialogue.
 
-    e "You've created a new Ren'Py game. Rehehehehe"
+    e "This is the beginning of the template."
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
+    e "And now it's over. LOL. Now the actual game begins"
 
     # This ends the game.
+
+    jump(scene1_start)
+
+
+
+label endGame:
+    
+    "The game is over. Thanks for playing!"
 
     return
