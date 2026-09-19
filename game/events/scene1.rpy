@@ -138,8 +138,9 @@ label scene1_start:
     c "{i}I'm only here{/i}"
     c "{i}because of him{/i}"
 
+
+# end of scene 1
+
     scene black with scene_interlude
+    jump scene2_start
 
-
-
-    jump endGame
