@@ -2,6 +2,9 @@ label scene1_start:
 
 # define characters
 
+    image c bothered = Transform("chase_bothered.png", zoom=0.75)
+    image surprised = Transform("surprised1.jpg", zoom=0.75, xalign=0.3, yalign=0.27)
+
     define c = Character("Chase")
     define w = Character("???")
     define scene_interlude = Fade(2.0, 0.5, 0.0)
@@ -50,6 +53,8 @@ label scene1_start:
     play sound "sink.mp3"
 
     "He began to wash his face, a lack of care for the mess he was making on his jacket."
+
+    show c bothered
 
     c "That was brutal."
 
@@ -112,10 +117,14 @@ label scene1_start:
 
     w "Ah, I'm glad to hear. No, I'm sorry. It's no surprise you don't recognize me since we haven't met since you and Timmy left."
 
-    stop music
+    stop music fadeout 0.5
     stop sound
 
     "{i}Timmy{/i}"
+
+    hide c bothered
+    show surprised
+    
 
     "As if saying that name was a spell; the soft lights in the bathroom, the soft hum of the ac, everything vanished." 
     "He felt transported to an empty vacuum in space."
@@ -126,6 +135,9 @@ label scene1_start:
     "A name belonging to someone who was once so important and dear to him."
     "Now resurfacing to his mind, as if it had been stuck at the bottom of a seabed for centuries."
     "From this vacuum of nothing he was cast to, he could faintly hear the woman continue to talk."
+
+    hide surprised
+    show c bothered
 
     w "I apologize if you are busy, but please listen." 
     w "My dear Timmy is gone." 

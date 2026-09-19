@@ -1,6 +1,11 @@
 label scene2_start:
 # define characters
 
+    image c neutral = Transform("chase_neutral.png", zoom=0.75)
+    image c happy = Transform("chase_happy.png", zoom=0.75)
+    image c neutral up = Transform("chase_neutral_up.png", zoom=0.75)
+    image m = Transform("mom.png", zoom=0.75)
+
     define c = Character("Chase")
     define m = Character("Timothy's mother")
     define scene_interlude = Fade(2.0, 0.5, 0.0)
@@ -8,7 +13,7 @@ label scene2_start:
 # scene 2.0 script starts here
 
     scene sidewalk with fade
-    #play music "orchestra tuning.ogg"
+    play music "suburban.mp3" fadein 1.0
 
     "The cold breeze brushed past his shoulders and face."
     "It was a much needed welcome from the approaching fall, signaling an end to summer heat that Chase considered to be inescapable."
@@ -31,12 +36,15 @@ label scene2_start:
     "He chuckled at the playful change of theme to the house that he once recalled as plain and barebones."
     "As he walked up to the house, the woman who called him yesterday opened the front door."
     "A very warm and motherly smile greeted him"
+
+    show c happy
+    show m at right
     
     m "Chase, I'm so glad you could make it"
 
     "Chase could barely note the tired look in her eyes."
     "Chase nodded his head down and greeted back with a smile, albeit slightly sheepish."
-    c "Good afternoon, Mrs. (Timmy's last name or something) how are you holding up?"
+    c "Good afternoon, Mrs. Timmy's last name or something how are you holding up?"
 
     "The smile remained, but the warmth on Mrs. (blanks) face faded." 
     "Her eyes peered off"
@@ -59,7 +67,13 @@ label scene2_start:
     "The brown wooden bookshelfs of various sizes and shapes lined up alongside the dining table."
     "The voice of Timothy's mother snapped him back to their conversation."
 
+    show c neutral
+    show m at right
+
     m "He had been calling and sending photos the past few years. However, he never did visit. He must had been busy with school just like you were"
+
+    hide c neutral
+    show c neutral up
 
     "Chase's eyebrows began to knit in confusion."
 
@@ -77,6 +91,10 @@ label scene2_start:
 
     "Timothy's mother began to drift off with a look of concern."
     "Chase asked."
+
+    hide c neutral up
+    show c neutral
+
     c "When did you guys find out he'd been gone this whole time?"
 
     "Timothy's mother fixated her look on something off in the distance."
@@ -96,11 +114,21 @@ label scene2_start:
 
     scene timmy_bedroom with fade
 
+    show c neutral up
+    show m at right
+
+
     "Chase commented,"
 
     c "It's been a while since I've been here. Last time was..."
 
+    hide m
+
     "Chase stopped walking for a moment."
+
+    hide c neutral up
+    show c neutral
+
     "He squinted his eyes."
 
     c "Gee, I can't remember."
