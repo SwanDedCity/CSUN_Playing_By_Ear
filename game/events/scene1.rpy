@@ -4,6 +4,8 @@ label scene1_start:
 
     image c bothered = Transform("chase_bothered.png", zoom=0.75)
     image surprised = Transform("surprised1.jpg", zoom=0.75, xalign=0.3, yalign=0.27)
+    image c happy = Transform("chase_happy.png", zoom=0.75)
+    image c neutral up = Transform("chase_neutral_up.png", zoom=0.75)
 
     define c = Character("Chase")
     define w = Character("???")
@@ -14,11 +16,11 @@ label scene1_start:
     scene stage_lights with fade
     play music "orchestra tuning.ogg"
 
-    "The ensemble of instruments tuning started to grow all louder. 
+    "The ensemble of instruments tuning began to grow louder and louder. 
     A mix of both harmonious and dissonant notes merging into one another. 
     As if the orchestra was all one giant beast waking up."
 
-    "Chase untucked the jacket of his tuxedo from the seat, and adjusted his position."
+    "Chase untucked the jacket of his tuxedo from his chair, and adjusted his seating position."
     "He straightened his back, tilted his head forward, and took a deep breath. 
     He paused for a moment, relaxing the twitch in his bowhand before picking up the violin."
 
@@ -36,10 +38,10 @@ label scene1_start:
 
     c "{i}They were empty now, but by next week they will be filled with an eager audience dying to hear our performance.{/i}"
 
-    stop music fadeout 1.0
+    stop music fadeout 3.0
 
-    "The roar of the giant beast came to an end, and he joined the rest of the orchestra in silence, waiting for the conductor to begin the performance. 
-    And with a deep breath out, he put into sound all of the fervent passion and dedication trapped within him."
+    "The roar of the giant beast came to an end, and he joined the rest of the orchestra in silence, waiting for the conductor to begin the performance." 
+    "And with a deep breath out, he put into sound all the fervent passion and dedication trapped within him."
 
     scene black with scene_interlude
 
@@ -66,7 +68,14 @@ label scene1_start:
     "He turned off the faucet, and then buried his face in a towel that he picked up from the side."
 
     c "They don't see my plight. They don't get what I've gone through for this!"
+
+    hide c bothered
+    show c happy
+
     c "They simply can't recognize talent when it's in the room. Ha! That must be it"
+
+    hide c happy
+    show c bothered
 
     "That quick laugh vanished just as soon as it arrived. Making way to despair."
     "His head rushing with a million thoughts."
@@ -75,7 +84,7 @@ label scene1_start:
 
     "Silence, as no one had an answer, not even him."
 
-    c "No, this isn't happening. I'm sure I can discuss with the director to reconsider or for, at the very least, another audition."
+    c "No, this isn't happening. I'm sure I can discuss with the director to reconsider; or to give me, at the very least, another audition."
 
     "He did not notice his heart beating thunderously loud in his head."
     "His shoulders sagged in defeat."
@@ -103,9 +112,12 @@ label scene1_start:
 
     w "Chase? Is that really you Chase?"
 
+    hide c bothered
+    show c neutral up
+    
     "Chase gets taken aback for a moment."
     "Her voice sounded familiar to him."
-    "He briefly tries to recall if the voice belonged to an agent or director he's previously worked with."
+    "He briefly tries to recall if the voice belonged to an agent or a director he's previously worked with."
 
     c "Yes, yes, this is Chase"
 
@@ -117,12 +129,12 @@ label scene1_start:
 
     w "Ah, I'm glad to hear. No, I'm sorry. It's no surprise you don't recognize me since we haven't met since you and Timmy left."
 
-    stop music fadeout 0.5
+    stop music fadeout 2.0
     stop sound
 
     "{i}Timmy{/i}"
 
-    hide c bothered
+    hide c neutral up
     show surprised
     
 
