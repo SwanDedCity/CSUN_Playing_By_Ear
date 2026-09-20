@@ -1,3 +1,6 @@
+init python:
+    renpy.music.register_channel("ringtone", mixer="sfx", loop=True)
+
 label scene1_start:
 
 # define characters
@@ -72,7 +75,7 @@ label scene1_start:
     hide c bothered
     show c happy
 
-    c "They simply can't recognize talent when it's in the room. Ha! That must be it"
+    c "They simply can't recognize talent when it's in the room. Ha! That must be it."
 
     hide c happy
     show c bothered
@@ -90,12 +93,13 @@ label scene1_start:
     "His shoulders sagged in defeat."
 
     c "I don't even want this. I won't be able to play the way I want here."
-    c "Maybe they are right. Maybe my passion really is gone"
+    c "Maybe they are right. Maybe my passion really is gone."
 
     "He stared at his own reflection in the mirror, beads of water dripping from his face. He searched that man's face for an answer."
 
     c "What was I doing all of this for?"
 
+    play ringtone "phone ringing.mp3" volume 6
     "{b}RING RING RING{/b}"
 
     "He was interrupted by his phone's ringtone. It was an unknown number that had been calling him for the past week."
@@ -104,11 +108,12 @@ label scene1_start:
     c "{i}...{/i}"
     c "{i}Now that my chances with the rehearsal are in the gutter, I might as well.{/i}"
 
+    stop ringtone
     "Chase answered."
 
     c "Hey, why do you guys keep calling me?"
 
-    "The voice of a woman answers relief"
+    "The voice of a woman answers with relief"
 
     w "Chase? Is that really you Chase?"
 
@@ -119,9 +124,9 @@ label scene1_start:
     "Her voice sounded familiar to him."
     "He briefly tries to recall if the voice belonged to an agent or a director he's previously worked with."
 
-    c "Yes, yes, this is Chase"
+    c "Yes, yes, this is Chase."
 
-    "now holding the phone with both hands"
+    "Now holding the phone with both hands"
 
     c "I'm sorry but I can't recall who this is."
 
@@ -138,7 +143,7 @@ label scene1_start:
     show surprised
     
 
-    "As if saying that name was a spell; the soft lights in the bathroom, the soft hum of the ac, everything vanished." 
+    "As if saying that name was a spell; the soft lights in the bathroom, the soft hum of the AC, everything vanished." 
     "He felt transported to an empty vacuum in space."
 
     c "Timothy."
@@ -153,17 +158,17 @@ label scene1_start:
 
     w "I apologize if you are busy, but please listen." 
     w "My dear Timmy is gone." 
-    w "We don't know was really happen to him, but he's been gone for the past few years.-"
+    w "We don't know what really happen to him, but he's been gone for the past few years.-"
 
     c "{i}Maybe that's who I did this all for.{/i}"
 
     "The woman continued"
     w "You were the last person close to him."
 
-    c "{i}Yes, It's coming back to me. I haven't thought about it since we parted way.{/i}"
+    c "{i}Yes, it's coming back to me. I haven't thought about it since we parted ways.{/i}"
 
-    w "Please if you could come by our house sometimes this weekend."
-    w "We have some things we'd like you to look at, to see if it'll give you an idea of where he could have gone"
+    w "Please if you could come by our house sometime this weekend."
+    w "We have some things we'd like you to look at, to see if it'll give you an idea of where he could have gone."
 
     c "{i}But it's true.{/i}"
     c "{i}I'm only here{/i}"
