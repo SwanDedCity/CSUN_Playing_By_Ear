@@ -3,6 +3,11 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
+ #Custom Audio Channels
+init python:
+    renpy.music.register_channel("ringtone", mixer="sfx", loop=True)
+
+
 define c = Character("Chase")
 
 

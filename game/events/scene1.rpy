@@ -1,6 +1,3 @@
-init python:
-    renpy.music.register_channel("ringtone", mixer="sfx", loop=True)
-
 label scene1_start:
 
 # define characters
