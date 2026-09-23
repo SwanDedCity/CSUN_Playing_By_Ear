@@ -29,6 +29,8 @@ label start:
 
     # These display lines of dialogue.
 
+    c "Hello, my name is Brandon."
+
     c "This is the beginning of the template."
 
     c "And now it's over. LOL. Now the actual game begins"
