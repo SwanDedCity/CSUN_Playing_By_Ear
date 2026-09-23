@@ -14,7 +14,7 @@ style default:
     language gui.language
 
 
-#hahahahahahahaa
+#hahahahahahahaasfsfsf ds
 style input:
     properties gui.text_properties("input", accent=True)
     adjust_spacing False
