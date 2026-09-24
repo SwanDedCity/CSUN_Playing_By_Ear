@@ -6,7 +6,7 @@ label scene1_start:
     image surprised = Transform("surprised1.jpg", zoom=0.75, xalign=0.3, yalign=0.27)
     image c happy = Transform("chase_happy.png", zoom=0.75)
     image c neutral up = Transform("chase_neutral_up.png", zoom=0.75)
-    image s neutral = Transform("sirenbird.PNG")
+    image s neutral = Transform("sirenbird.PNG", xalign=0.5, yalign=0.5)
 
     define c = Character("Chase")
     define w = Character("???")
