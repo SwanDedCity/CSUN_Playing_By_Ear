@@ -6,6 +6,7 @@ label scene1_start:
     image surprised = Transform("surprised1.jpg", zoom=0.75, xalign=0.3, yalign=0.27)
     image c happy = Transform("chase_happy.png", zoom=0.75)
     image c neutral up = Transform("chase_neutral_up.png", zoom=0.75)
+    image s neutral = Transform("sirenbird.PNG")
 
     define c = Character("Chase")
     define w = Character("???")
@@ -15,6 +16,8 @@ label scene1_start:
 
     scene stage_lights with fade
     play music "orchestra tuning.ogg"
+
+    show s neutral
 
     "The ensemble of instruments tuning began to grow louder and louder. 
     A mix of both harmonious and dissonant notes merging into one another. 
