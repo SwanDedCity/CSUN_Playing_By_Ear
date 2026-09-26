@@ -8,7 +8,6 @@ init python:
     renpy.music.register_channel("ringtone", mixer="sfx", loop=True)
 
 image c square = Transform("chase_neutral_square.png")
-image c rectangle = Transform("chase_neutral_rectangle.png")
 
 define c = Character("Chase")
 
@@ -31,8 +30,6 @@ label start:
     # These display lines of dialogue.
 
     c "Hello, my name is Brandon."
-
-    show c rectangle at left
 
     c "hello hahahaha"
 
