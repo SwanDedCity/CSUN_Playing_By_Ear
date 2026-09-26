@@ -7,9 +7,10 @@
 init python:
     renpy.music.register_channel("ringtone", mixer="sfx", loop=True)
 
+image c square = Transform("chase_neutral_square.png")
+image c rectangle = Transform("chase_neutral_rectangle.png")
 
 define c = Character("Chase")
-
 
 # The game starts here.
 
@@ -25,11 +26,13 @@ label start:
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show eileen happy
+    show c square at left
 
     # These display lines of dialogue.
 
     c "Hello, my name is Brandon."
+
+    show c rectangle at left
 
     c "hello hahahaha"
 

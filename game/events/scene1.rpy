@@ -17,8 +17,6 @@ label scene1_start:
     scene stage_lights with fade
     play music "orchestra tuning.ogg"
 
-    show s neutral
-
     "The ensemble of instruments tuning began to grow louder and louder. 
     A mix of both harmonious and dissonant notes merging into one another. 
     As if the orchestra was all one giant beast waking up."
