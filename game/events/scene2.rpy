@@ -148,5 +148,35 @@ label scene2_start:
 
     c "I honestly don't even know where to start with this"
 
-    jump endGame
+label investRoom:
+    window hide
+    show screen room_main_interact
+    pause
+    jump investRoom
+
+screen room_main_interact():
+    imagebutton auto "stuffed animal %s":
+            focus_mask True
+            action Jump("stuffedAnimal"), Hide("room_main_interact")
+    imagebutton auto "basketball %s":
+            focus_mask True
+            action Jump("basketball"), Hide("room_main_interact")
+
+
+label stuffedAnimal:
+        hide screen room_main_interact
+        c "{i}An old stuffed animal. It's once soft plush, now turned to a damp matte.{/i}"
+        c "{i}I can't even read it's tag anymore.{/i}"
+        c "{i}What is this even supposed to be?{/i}"
+        jump investRoom
+
+label basketball:
+        hide screen room_main_interact
+        c "{i}Cool a basketball!{/i}"
+        c "{i}I can't imagine Timmy playing outside. He was always here in his room practicing with his instruments.{/i}"
+        jump investRoom
+
+
+
+#jump endGame
 
