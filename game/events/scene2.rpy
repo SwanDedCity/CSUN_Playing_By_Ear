@@ -149,6 +149,7 @@ label scene2_start:
     c "I honestly don't even know where to start with this"
 
     $ clickedGuitar = 0;
+    #yaya
 
 label investRoom:
     window hide
