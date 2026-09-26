@@ -2,10 +2,24 @@ label scene1_start:
 
 # define characters
 
+# chase
+    image c neutral = Transform("chase_neutral_square.png")
+    image c upset = Transform("chase_upset.png")
+    image c surprised = Transform("chase_surprised.png")
+
+# chase formal
+    image c neutral formal = Transform("chase_neutral_formal.png")
+    image c happy formal = Transform("chase_happy_formal.png")
+    image c upset formal = Transform("chase_upset_formal.png")
+    image c surprised formal = Transform("chase_surprised_formal.png")
+    
+# chase (concept art)
     image c bothered = Transform("chase_bothered.png", zoom=0.75)
     image surprised = Transform("surprised1.jpg", zoom=0.75, xalign=0.3, yalign=0.27)
     image c happy = Transform("chase_happy.png", zoom=0.75)
     image c neutral up = Transform("chase_neutral_up.png", zoom=0.75)
+
+# sirenbird
     image s neutral = Transform("sirenbird.PNG", xalign=0.5, yalign=0.5)
 
     define c = Character("Chase")
