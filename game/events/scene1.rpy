@@ -13,7 +13,7 @@ label scene1_start:
     image c upset formal = Transform("chase_upset_formal.png")
     image c surprised formal = Transform("chase_surprised_formal.png")
     
-# chase (concept art)
+# chase (placeholder)
     image c bothered = Transform("chase_bothered.png", zoom=0.75)
     image surprised = Transform("surprised1.jpg", zoom=0.75, xalign=0.3, yalign=0.27)
     image c happy = Transform("chase_happy.png", zoom=0.75)
