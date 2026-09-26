@@ -71,7 +71,7 @@ label scene1_start:
 
     "He began to wash his face, a lack of care for the mess he was making on his jacket."
 
-    show c bothered
+    show c upset formal
 
     c "That was brutal."
 
@@ -84,13 +84,13 @@ label scene1_start:
 
     c "They don't see my plight. They don't get what I've gone through for this!"
 
-    hide c bothered
-    show c happy
+    hide c upset formal
+    show c happy formal
 
     c "They simply can't recognize talent when it's in the room. Ha! That must be it."
 
-    hide c happy
-    show c bothered
+    hide c happy formal
+    show c neutral formal
 
     "That quick laugh vanished just as soon as it arrived. Making way to despair."
     "His head rushing with a million thoughts."
