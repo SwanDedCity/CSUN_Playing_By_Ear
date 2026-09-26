@@ -148,6 +148,8 @@ label scene2_start:
 
     c "I honestly don't even know where to start with this"
 
+    $ clickedGuitar = 0;
+
 label investRoom:
     window hide
     show screen room_main_interact
@@ -161,6 +163,9 @@ screen room_main_interact():
     imagebutton auto "basketball %s":
             focus_mask True
             action Jump("basketball"), Hide("room_main_interact")
+    imagebutton auto "guitar %s":
+            focus_mask True
+            action Jump("guitar"), Hide("room_main_interact")
 
 
 label stuffedAnimal:
@@ -171,12 +176,20 @@ label stuffedAnimal:
         jump investRoom
 
 label basketball:
+        #To do: easter egg basketball shot
         hide screen room_main_interact
         c "{i}Cool a basketball!{/i}"
         c "{i}I can't imagine Timmy playing outside. He was always here in his room practicing with his instruments.{/i}"
         jump investRoom
 
-
+label guitar:
+        if bool(clickedGuitar) is False:
+                "I've never clicked this before"
+                $ clickedGuitar = 1;
+                jump investRoom
+        if bool(clickedGuitar) is True:
+                "Bruh I have clicked this before"
+                jump investRoom
 
 #jump endGame
 
