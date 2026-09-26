@@ -152,7 +152,7 @@ label scene1_start:
     "{i}Timmy{/i}"
 
     hide c neutral up
-    show surprised
+    show c surprised formal
     
 
     "As if saying that name was a spell; the soft lights in the bathroom, the soft hum of the AC, everything vanished." 
@@ -165,7 +165,7 @@ label scene1_start:
     "Now resurfacing to his mind, as if it had been stuck at the bottom of a seabed for centuries."
     "From this vacuum of nothing he was cast to, he could faintly hear the woman continue to talk."
 
-    hide surprised
+    hide c surprised formal
     show c bothered
 
     w "I apologize if you are busy, but please listen." 
