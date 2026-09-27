@@ -7,7 +7,7 @@
 init python:
     renpy.music.register_channel("ringtone", mixer="sfx", loop=True)
 
-image c square = Transform("chase_neutral_square.png")
+image c happy = Transform("chase_happy.png")
 
 define c = Character("Chase")
 
@@ -25,7 +25,7 @@ label start:
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show c square at left
+    show c happy at left
 
     # These display lines of dialogue.
 

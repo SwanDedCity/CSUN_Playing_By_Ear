@@ -1,9 +1,14 @@
 label scene2_start:
 # define characters
 
-    image c neutral = Transform("chase_neutral.png", zoom=0.75)
-    image c happy = Transform("chase_happy.png", zoom=0.75)
-    image c neutral up = Transform("chase_neutral_up.png", zoom=0.75)
+    # chase
+    image c neutral = Transform("chase_neutral.PNG")
+    image c happy = Transform("chase_happy.PNG")
+    image c surprised = Transform("chase_surprised.PNG")
+    image c upset = Transform("chase_upset.PNG")
+    image c grumpy = Transform("chase_grumpy.PNG")
+
+    # mom
     image m = Transform("mom.png", zoom=0.75)
 
     define c = Character("Chase")
@@ -38,7 +43,7 @@ label scene2_start:
     "As he walked up to the house, the woman who called him yesterday opened the front door."
     "A very warm and motherly smile greeted him"
 
-    show c happy
+    show c happy at left
     show m at right
     
     m "Chase, I'm so glad you could make it"
@@ -68,13 +73,12 @@ label scene2_start:
     "The brown wooden bookshelfs of various sizes and shapes lined up alongside the dining table."
     "The voice of Timothy's mother snapped him back to their conversation."
 
-    show c neutral
+    show c neutral at left
     show m at right
 
     m "He had been calling and sending photos the past few years. However, he never did visit. He must had been busy with school just like you were."
 
-    hide c neutral
-    show c neutral up
+    # need to add updated eyebrow raise image here, WIP
 
     "Chase's eyebrows began to knit in confusion."
 
@@ -92,9 +96,6 @@ label scene2_start:
 
     "Timothy's mother began to drift off with a look of concern."
     "Chase asked."
-
-    hide c neutral up
-    show c neutral
 
     c "When did you guys find out he'd been gone this whole time?"
 
@@ -115,7 +116,7 @@ label scene2_start:
 
     scene timmy_bedroom with fade
 
-    show c neutral up
+    show c neutral at left
     show m at right
 
 
@@ -126,9 +127,6 @@ label scene2_start:
     hide m
 
     "Chase stopped walking for a moment."
-
-    hide c neutral up
-    show c neutral
 
     "He squinted his eyes."
 
