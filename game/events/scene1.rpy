@@ -3,15 +3,18 @@ label scene1_start:
 # define characters
 
 # chase
-    image c neutral = Transform("chase_neutral_square.png")
-    image c upset = Transform("chase_upset.png")
-    image c surprised = Transform("chase_surprised.png")
+    image c neutral = Transform("chase_neutral.PNG")
+    image c happy = Transform("chase_happy.PNG")
+    image c surprised = Transform("chase_surprised.PNG")
+    image c upset = Transform("chase_upset.PNG")
+    image c grumpy = Transform("chase_grumpy.PNG")
 
 # chase formal
-    image c neutral formal = Transform("chase_neutral_formal.png")
-    image c happy formal = Transform("chase_happy_formal.png")
-    image c upset formal = Transform("chase_upset_formal.png")
-    image c surprised formal = Transform("chase_surprised_formal.png")
+    image c neutral formal = Transform("chase_neutral_formal.PNG")
+    image c happy formal = Transform("chase_happy_formal.PNG")
+    image c surprised formal = Transform("chase_surprised_formal.PNG")
+    image c upset formal = Transform("chase_upset_formal.PNG")
+    image c grumpy formal = Transform("chase_grumpy_formal.PNG")
     
 # chase (past placeholders)
     #image c bothered = Transform("chase_bothered.png", zoom=0.75)
@@ -107,7 +110,7 @@ label scene1_start:
 
     scene restroom with fade
 
-    show c upset formal at left
+    show c grumpy formal at left
 
     play ringtone "phone ringing.mp3" volume 6
     "{b}RING RING RING{/b}"
@@ -127,7 +130,6 @@ label scene1_start:
 
     w "Chase? Is that really you Chase?"
 
-    hide c upset formal at left
     show c neutral formal at left
     
     "Chase gets taken aback for a moment."
@@ -147,11 +149,9 @@ label scene1_start:
     stop music fadeout 2.0
     stop sound
 
-    "{i}Timmy{/i}"
-
-    hide c neutral formal at left
     show c surprised formal at left
-    
+
+    "{i}Timmy{/i}"
 
     "As if saying that name was a spell; the soft lights in the bathroom, the soft hum of the AC, everything vanished." 
     "He felt transported to an empty vacuum in space."
@@ -163,7 +163,6 @@ label scene1_start:
     "Now resurfacing to his mind, as if it had been stuck at the bottom of a seabed for centuries."
     "From this vacuum of nothing he was cast to, he could faintly hear the woman continue to talk."
 
-    hide c surprised formal
     show c neutral formal at left
 
     w "I apologize if you are busy, but please listen." 
