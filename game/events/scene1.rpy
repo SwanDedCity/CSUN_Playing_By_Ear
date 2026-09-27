@@ -13,11 +13,11 @@ label scene1_start:
     image c upset formal = Transform("chase_upset_formal.png")
     image c surprised formal = Transform("chase_surprised_formal.png")
     
-# chase (placeholder)
-    image c bothered = Transform("chase_bothered.png", zoom=0.75)
-    image surprised = Transform("surprised1.jpg", zoom=0.75, xalign=0.3, yalign=0.27)
-    image c happy = Transform("chase_happy.png", zoom=0.75)
-    image c neutral up = Transform("chase_neutral_up.png", zoom=0.75)
+# chase (past placeholders)
+    #image c bothered = Transform("chase_bothered.png", zoom=0.75)
+    #image surprised = Transform("surprised1.jpg", zoom=0.75, xalign=0.3, yalign=0.27)
+    #image c happy = Transform("chase_happy.png", zoom=0.75)
+    #image c neutral up = Transform("chase_neutral_up.png", zoom=0.75)
 
 # sirenbird
     image s neutral = Transform("sirenbird.PNG", xalign=0.5, yalign=0.5)
@@ -71,7 +71,7 @@ label scene1_start:
 
     "He began to wash his face, a lack of care for the mess he was making on his jacket."
 
-    show c upset formal
+    scene image_chase_bathroom with fade
 
     c "That was brutal."
 
@@ -84,13 +84,7 @@ label scene1_start:
 
     c "They don't see my plight. They don't get what I've gone through for this!"
 
-    hide c upset formal
-    show c happy formal
-
     c "They simply can't recognize talent when it's in the room. Ha! That must be it."
-
-    hide c happy formal
-    show c neutral formal
 
     "That quick laugh vanished just as soon as it arrived. Making way to despair."
     "His head rushing with a million thoughts."
@@ -111,6 +105,10 @@ label scene1_start:
 
     c "What was I doing all of this for?"
 
+    scene restroom with fade
+
+    show c upset formal at left
+
     play ringtone "phone ringing.mp3" volume 6
     "{b}RING RING RING{/b}"
 
@@ -129,8 +127,8 @@ label scene1_start:
 
     w "Chase? Is that really you Chase?"
 
-    hide c bothered
-    show c neutral up
+    hide c upset formal at left
+    show c neutral formal at left
     
     "Chase gets taken aback for a moment."
     "Her voice sounded familiar to him."
@@ -151,8 +149,8 @@ label scene1_start:
 
     "{i}Timmy{/i}"
 
-    hide c neutral up
-    show c surprised formal
+    hide c neutral formal at left
+    show c surprised formal at left
     
 
     "As if saying that name was a spell; the soft lights in the bathroom, the soft hum of the AC, everything vanished." 
@@ -166,7 +164,7 @@ label scene1_start:
     "From this vacuum of nothing he was cast to, he could faintly hear the woman continue to talk."
 
     hide c surprised formal
-    show c bothered
+    show c neutral formal at left
 
     w "I apologize if you are busy, but please listen." 
     w "My dear Timmy is gone." 
