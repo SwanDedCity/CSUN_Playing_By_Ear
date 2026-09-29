@@ -165,6 +165,14 @@ screen room_main_interact():
     imagebutton auto "guitar %s":
             focus_mask True
             action Jump("guitar"), Hide("room_main_interact")
+    button:
+            action Call("guitarFall")    
+#    imagebutton auto "basketballHoop %s":
+#           focus_mask True
+#            action Jump("basketballHoop"), Hide("room_main_interact")
+#    imagebutton auto "computer %s":
+#            focus_mask True
+#            action Jump("computer"), Hide("room_main_interact")
 
 
 label stuffedAnimal:
@@ -185,10 +193,28 @@ label guitar:
         if bool(clickedGuitar) is False:
                 "I've never clicked this before"
                 $ clickedGuitar = 1;
+                "Although the room with littered with all sorts of intruments. From a keyboard, to a small set of drums, and even a cello." 
+                "There was one instrument that really caught Chase's eye."
+                c "What happened to Tim."
+                "He seemed to asking himself"
+                c "Why didn't he go to music university?"
+                c "He was so talented, he could pick up and play anything thrown at him. He put in so much time and effort too." 
+                c "I mean, even the people I just played with at the concert hall could not have hold a candle to him."
+                "It felt like the guitar was not acknlowledghing Chase. Looking past him."
+                c "And this. Man, you could not separate the two."
+                
+                menu:
+                        "Touch the guitar." (hover(jump(guitarFall))):
+                                "You shouldn't see this. touch guitar."
+
+                        "Look elsewhere."
+
                 jump investRoom
         if bool(clickedGuitar) is True:
                 "Bruh I have clicked this before"
                 jump investRoom
+label guitarFall:
+        "Yay you made it."
 
 #jump endGame
 
