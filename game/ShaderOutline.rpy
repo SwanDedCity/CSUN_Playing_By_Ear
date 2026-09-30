@@ -130,6 +130,10 @@ transform outline_black_thin:
 transform outline_black_thick:
     outline(width=4.0, color="#000000", threshold=0.8)
 
+transform outline_red_thick:
+    outline(width=4.0, color="#ff0000", threshold=0.8)
+
+
 transform shadow_soft:
     outline(width=0.0, color="#00000099", xoffset=10.0, yoffset=10.0, threshold=0.4)
 

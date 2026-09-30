@@ -37,6 +37,24 @@ label start:
 
     c "And now it's over. LOL. Now the actual game begins"
 
+    #THIS IS A TEST OF THE MUSIC PUZZLE SCREEN. UNCOMMENT THE LINES BELOW TO TEST IT
+    # highlight the lines below and press Ctrl + / to uncomment them
+    ##
+    # define intro_puzzle = {
+    # "items": [
+    #     {"id": "piano", "image": "images/piano.png", "x": 300, "y": 450},
+    #     {"id": "drums", "image": "images/drums.png", "x": 1150, "y": 500}
+    # ],
+    # "solution": ["drums", "piano"]
+    # }
+    # call screen music_puzzle(intro_puzzle)
+
+    # play music "fantasy song demo.mp3"
+    # c "I got it."
+    ##
+
+
+
     # This ends the game.
 
     jump scene1_start
