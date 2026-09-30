@@ -165,8 +165,6 @@ screen room_main_interact():
     imagebutton auto "guitar %s":
             focus_mask True
             action Jump("guitar"), Hide("room_main_interact")
-    button:
-            action Call("guitarFall")    
 #    imagebutton auto "basketballHoop %s":
 #           focus_mask True
 #            action Jump("basketballHoop"), Hide("room_main_interact")
@@ -176,7 +174,7 @@ screen room_main_interact():
 
 
 label stuffedAnimal:
-        hide screen room_main_interact
+        #hide screen room_main_interact
         c "{i}An old stuffed animal. It's once soft plush, now turned to a damp matte.{/i}"
         c "{i}I can't even read it's tag anymore.{/i}"
         c "{i}What is this even supposed to be?{/i}"
@@ -191,7 +189,7 @@ label basketball:
 
 label guitar:
         if bool(clickedGuitar) is False:
-                "I've never clicked this before"
+                "*guitar*"
                 $ clickedGuitar = 1;
                 "Although the room with littered with all sorts of intruments. From a keyboard, to a small set of drums, and even a cello." 
                 "There was one instrument that really caught Chase's eye."
@@ -204,17 +202,31 @@ label guitar:
                 c "And this. Man, you could not separate the two."
                 
                 menu:
-                        "Touch the guitar." (hover(jump(guitarFall))):
-                                "You shouldn't see this. touch guitar."
+                        "Touch the guitar.":
+                                "BAM!"
+                                "Before Chase could even decide to play the guitar, it fell from its hook on the wall."
+                                "The strings played out in a wail."
+                                c "SHOOT!"
+                                "Chase ran to the guitar; looking for any damage."
+                                c "Huh. Seems to be alright. Just a dramatic fall."
+                                "As he picked it up, he noticed a sticky note fell from the back of the guitar."
+                                c "Wait. What is this?"
+                                "On it was short and simple word. BLANK //make it something important"
+                                c "I don't understand what this means. And why would he be hiding it? Must be for something important."
+                                "After shaking off the questions in his head, he placed the sticky note back where he found it."
+                                "He was able to hang the guitar back up on an empty hook."
+                                c "Maybe I shouldn't mess with his things."
 
-                        "Look elsewhere."
+                        "Look elsewhere.":
+                                jump investRoom
 
                 jump investRoom
         if bool(clickedGuitar) is True:
-                "Bruh I have clicked this before"
+                "Tim's guitar. I can't even believe it's here and not with him."
+                "I shouldn't mess with it any futher."
+                "Although I do recall the message behind it reading: BLANK"
                 jump investRoom
-label guitarFall:
-        "Yay you made it."
+
 
 #jump endGame
 
