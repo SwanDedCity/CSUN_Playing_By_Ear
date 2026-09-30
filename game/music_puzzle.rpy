@@ -19,7 +19,7 @@ screen music_puzzle(puzzle):
                 hover At(Transform(item["image"], zoom=0.5), outline_red_thick)
                 action NullAction()
 
-            # slected state
+            # selected state
             elif item["id"] in chosen:
                 idle At(Transform(item["image"], zoom=0.5), outline_white_thick)
                 hover At(Transform(item["image"], zoom=0.5), outline_white_thick)

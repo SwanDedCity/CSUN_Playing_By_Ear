@@ -156,25 +156,35 @@ label investRoom:
     jump investRoom
 
 screen room_main_interact():
-    imagebutton auto "stuffed animal %s":
-            focus_mask True
-            action Jump("stuffedAnimal"), Hide("room_main_interact")
-    imagebutton auto "basketball %s":
-            focus_mask True
-            action Jump("basketball"), Hide("room_main_interact")
-    imagebutton auto "guitar %s":
-            focus_mask True
-            action Jump("guitar"), Hide("room_main_interact")
-#    imagebutton auto "basketballHoop %s":
-#           focus_mask True
-#            action Jump("basketballHoop"), Hide("room_main_interact")
-#    imagebutton auto "computer %s":
-#            focus_mask True
-#            action Jump("computer"), Hide("room_main_interact")
+        modal True
+        imagebutton:
+                idle At("stuffed animal", shadow_soft)
+                hover At("stuffed animal", shadow_hard)
+                focus_mask True
+                action Jump("stuffedAnimal"), renpy.hide_screen("room_main_interact")
+        imagebutton:
+                idle At("basketball", shadow_soft)
+                hover At("basketball", shadow_hard)
+                focus_mask True
+                action Jump("basketball"), renpy.hide_screen("room_main_interact")
+        imagebutton:
+                idle At("guitar", outline_white_thick)
+                hover At("guitar", outline_black_thick)
+                focus_mask True
+                action Jump("guitar"), renpy.hide_screen("room_main_interact")
+        imagebutton:
+                idle "hoop"
+                #hover At("hoop", outline_black_thick)
+                focus_mask True
+                #action Jump("hoop"), Hide("room_main_interact")
+        imagebutton:
+                idle At("computer", outline_white_thick)
+                hover At("computer", outline_black_thick)
+                focus_mask True
+                action Jump("computer"), Hide("room_main_interact")
 
 
 label stuffedAnimal:
-        #hide screen room_main_interact
         c "{i}An old stuffed animal. It's once soft plush, now turned to a damp matte.{/i}"
         c "{i}I can't even read it's tag anymore.{/i}"
         c "{i}What is this even supposed to be?{/i}"
@@ -182,15 +192,29 @@ label stuffedAnimal:
 
 label basketball:
         #To do: easter egg basketball shot
-        hide screen room_main_interact
+        show screen hoop
         c "{i}Cool a basketball!{/i}"
         c "{i}I can't imagine Timmy playing outside. He was always here in his room practicing with his instruments.{/i}"
+        hide screen hoop
+        jump investRoom
+
+screen hoop():
+        imagebutton:
+                idle At("hoop", outline_white_thick)
+                hover At("hoop", outline_black_thick)
+                focus_mask True
+                action Jump("hoop"), renpy.hide_screen("room_main_interact")
+
+label hoop:
+        c "I think I have time for a swish."
+        "Chase tossed the basketball across the room."
+        "It was a fabulous miss!"
+        "It made Chase wince in silence."
+        c "I'm getting distracted. The ball was deflated anyways."
         jump investRoom
 
 label guitar:
         if bool(clickedGuitar) is False:
-                "*guitar*"
-                $ clickedGuitar = 1;
                 "Although the room with littered with all sorts of intruments. From a keyboard, to a small set of drums, and even a cello." 
                 "There was one instrument that really caught Chase's eye."
                 c "What happened to Tim."
@@ -203,6 +227,7 @@ label guitar:
                 
                 menu:
                         "Touch the guitar.":
+                                $ clickedGuitar = 1;
                                 "BAM!"
                                 "Before Chase could even decide to play the guitar, it fell from its hook on the wall."
                                 "The strings played out in a wail."
@@ -211,7 +236,7 @@ label guitar:
                                 c "Huh. Seems to be alright. Just a dramatic fall."
                                 "As he picked it up, he noticed a sticky note fell from the back of the guitar."
                                 c "Wait. What is this?"
-                                "On it was short and simple word. BLANK //make it something important"
+                                "On it was short and simple word. blank //make it something important"
                                 c "I don't understand what this means. And why would he be hiding it? Must be for something important."
                                 "After shaking off the questions in his head, he placed the sticky note back where he found it."
                                 "He was able to hang the guitar back up on an empty hook."
@@ -224,8 +249,41 @@ label guitar:
         if bool(clickedGuitar) is True:
                 "Tim's guitar. I can't even believe it's here and not with him."
                 "I shouldn't mess with it any futher."
-                "Although I do recall the message behind it reading: BLANK"
+                "Although I do recall the message behind it reading: blank"
                 jump investRoom
+
+label computer:
+        "An old computer from the early 200s is tucked against the wall."
+        "Chase moved some hats and shirts that were strewn on top of the monitor."
+        c "{i}Something about this computer bothers me. I mean it's old and yellow.{/i}"
+        "He sat down on a chair and scooted himself close to the computer."
+        "He found the mouse and keyboard buried beneath a pile consisting of music sheets, a metronome, and many guitar picks."
+        c "{i}Who knows, maybe it has info on Tim. Let's turn on this bad boy."
+
+        play sound "computer startup.mp3"
+
+        #add interface l8r
+
+        "Like a zombie rising from the dead, the fans of the computer slowly came to life."
+        "He could see the cobwebs and dust flying out from a side of the computer."
+        "For a brief moment, the computer started up just fine."
+        "Just fine until it startled Chase with distorted audio and a glitchy screen."
+        c "Did this computer always do this?"
+        "The computer then began to flicker a warped screen prompting him for a password."
+
+        python:
+                password = renpy.input("Enter password:")
+                if password == "blank":
+                        renpy.jump("computerAccept")
+                else:
+                        renpy.jump("computerReject")
+label computerAccept:
+        "YAY. You have made it into the computer"
+        jump investRoom
+label computerReject:
+        c "Damn, seems I don't have an idea what it could be."
+        c "Maybe I can find a clue somewhere in this room."
+        jump investRoom
 
 
 #jump endGame
