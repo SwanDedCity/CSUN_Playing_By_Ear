@@ -14,7 +14,7 @@ style default:
     language gui.language
 
 
-#hahahahahahahaasfsfsf ds
+
 style input:
     properties gui.text_properties("input", accent=True)
     adjust_spacing False
@@ -419,6 +419,7 @@ style main_menu_version:
 
 screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
 
+    # on "show" action [ShowMenu("custom_game_menu"), Hide()]
     style_prefix "game_menu"
 
     if main_menu:
@@ -476,6 +477,7 @@ screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
                     transclude
 
     use navigation
+    # use custom_navigation
 
     textbutton _("Return"):
         style "return_button"
