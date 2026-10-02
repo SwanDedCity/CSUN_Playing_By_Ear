@@ -26,13 +26,14 @@
     define c = Character("Chase")
     define w = Character("???")
     define m = Character("Timothy's mother")
+
+# Other definitions
+
     define scene_interlude = Fade(2.0, 0.5, 0.0)
 
  #Custom Audio Channels
 init python:
     renpy.music.register_channel("ringtone", mixer="sfx", loop=True)
-
-define c = Character("Chase")
 
 # The game starts here.
 
@@ -44,14 +45,11 @@ label start:
 
     scene bg room
 
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
+    # This shows a character sprite. 
 
     show c happy at left
 
     # These display lines of dialogue.
-
 
     c "This is the of beginning script.rpy"
 
@@ -71,7 +69,7 @@ label start:
     play music "fantasy song demo.mp3"
     c "I got it."
     ##
-
+    
 
     "Now it's over. The actual begins begins."
     "We jump to scene 1 in the events folder"
