@@ -1,19 +1,4 @@
 label scene2_start:
-# define characters
-
-    # chase
-    image c neutral = Transform("chase_neutral.PNG")
-    image c happy = Transform("chase_happy.PNG")
-    image c surprised = Transform("chase_surprised.PNG")
-    image c upset = Transform("chase_upset.PNG")
-    image c grumpy = Transform("chase_grumpy.PNG")
-
-    # mom
-    image m = Transform("mom.png", zoom=0.75)
-
-    define c = Character("Chase")
-    define m = Character("Timothy's mother")
-    define scene_interlude = Fade(2.0, 0.5, 0.0)
 
 # scene 2.0 script starts here
 

@@ -1,34 +1,5 @@
 label scene1_start:
 
-# define characters
-
-# chase
-    image c neutral = Transform("chase_neutral.PNG")
-    image c happy = Transform("chase_happy.PNG")
-    image c surprised = Transform("chase_surprised.PNG")
-    image c upset = Transform("chase_upset.PNG")
-    image c grumpy = Transform("chase_grumpy.PNG")
-
-# chase formal
-    image c neutral formal = Transform("chase_neutral_formal.PNG")
-    image c happy formal = Transform("chase_happy_formal.PNG")
-    image c surprised formal = Transform("chase_surprised_formal.PNG")
-    image c upset formal = Transform("chase_upset_formal.PNG")
-    image c grumpy formal = Transform("chase_grumpy_formal.PNG")
-    
-# chase (past placeholders)
-    #image c bothered = Transform("chase_bothered.png", zoom=0.75)
-    #image surprised = Transform("surprised1.jpg", zoom=0.75, xalign=0.3, yalign=0.27)
-    #image c happy = Transform("chase_happy.png", zoom=0.75)
-    #image c neutral up = Transform("chase_neutral_up.png", zoom=0.75)
-
-# sirenbird
-    image s neutral = Transform("sirenbird.PNG", xalign=0.5, yalign=0.5)
-
-    define c = Character("Chase")
-    define w = Character("???")
-    define scene_interlude = Fade(2.0, 0.5, 0.0)
-
 # scene 1.0 script starts here
 
     scene stage_lights with fade

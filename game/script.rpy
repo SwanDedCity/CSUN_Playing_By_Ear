@@ -1,13 +1,36 @@
 ﻿# The main script of the game goes in this file.
 
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
+# Define character images
+
+# chase
+    image c neutral = Transform("chase_neutral.PNG")
+    image c happy = Transform("chase_happy.PNG")
+    image c surprised = Transform("chase_surprised.PNG")
+    image c upset = Transform("chase_upset.PNG")
+    image c grumpy = Transform("chase_grumpy.PNG")
+
+# chase formal
+    image c neutral formal = Transform("chase_neutral_formal.PNG")
+    image c happy formal = Transform("chase_happy_formal.PNG")
+    image c surprised formal = Transform("chase_surprised_formal.PNG")
+    image c upset formal = Transform("chase_upset_formal.PNG")
+    image c grumpy formal = Transform("chase_grumpy_formal.PNG")
+
+ # mom placeholder
+    image m = Transform("mom.png", zoom=0.75)
+
+# sirenbird
+    image s neutral = Transform("sirenbird.PNG", xalign=0.5, yalign=0.5)
+
+# Define characters for dialogue
+    define c = Character("Chase")
+    define w = Character("???")
+    define m = Character("Timothy's mother")
+    define scene_interlude = Fade(2.0, 0.5, 0.0)
 
  #Custom Audio Channels
 init python:
     renpy.music.register_channel("ringtone", mixer="sfx", loop=True)
-
-image c happy = Transform("chase_happy.png")
 
 define c = Character("Chase")
 
