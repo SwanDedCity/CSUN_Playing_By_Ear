@@ -365,7 +365,7 @@ screen main_menu():
 
     ## The use statement includes another screen inside this one. The actual
     ## contents of the main menu are in the navigation screen.
-    use navigation
+    use custom_navigation_main
 
     if gui.show_name:
 
@@ -389,7 +389,8 @@ style main_menu_frame:
     xsize 420
     yfill True
 
-    background "gui/overlay/main_menu.png"
+    # background "gui/overlay/main_menu.png"
+    background "gui/custom_gui/c_main_menu.png"
 
 style main_menu_vbox:
     xalign 1.0

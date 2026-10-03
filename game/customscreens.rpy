@@ -1,3 +1,80 @@
+
+style mm_gui_text:
+    color "#0099cc"#gui.cs.accent_color
+    hover_color "#000000"
+
+screen gui_state1_button(yposs=0, text="Start", actionChoice=Start()):
+        imagebutton auto "gui/custom_gui/mm_%s.png":
+            xpos 0.423 
+            ypos yposs
+            focus_mask True
+            action Start()
+        textbutton _(text):
+            xpos 0.45 
+            ypos yposs
+            text_style "mm_gui_text"
+            action actionChoice
+
+
+
+
+screen custom_navigation_main():
+
+    vbox:
+        style_prefix "navigation"
+
+        xpos gui.navigation_xpos
+        yalign 0.5
+
+        spacing gui.navigation_spacing
+
+        if main_menu:
+
+            textbutton _("Start") action Start()
+
+        else:
+
+            textbutton _("History") action ShowMenu("history")
+
+            textbutton _("Save") action ShowMenu("save")
+
+        textbutton _("Load") action ShowMenu("load")
+
+        textbutton _("Preferences") action ShowMenu("preferences")
+
+        if _in_replay:
+
+            textbutton _("End Replay") action EndReplay(confirm=True)
+
+        elif not main_menu:
+
+            textbutton _("Main Menu") action MainMenu()
+
+        textbutton _("About") action ShowMenu("custom_about")
+
+        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+
+            ## Help isn't necessary or relevant to mobile devices.
+            textbutton _("Help") action ShowMenu("help")
+
+        if renpy.variant("pc"):
+
+            ## The quit button is banned on iOS and unnecessary on Android and
+            ## Web.
+            textbutton _("Quit") action Quit(confirm=not main_menu)
+    
+    fixed:
+        add "gui/custom_gui/mm_ui.png" xpos 0 ypos 0
+
+        use gui_state1_button(0.324, "New Game", Start())
+        use gui_state1_button(0.425, "Load Game", ShowMenu("load"))
+        use gui_state1_button(0.509, "Settings", ShowMenu("preferences"))
+        use gui_state1_button(0.609, "Quit", Quit(confirm=not main_menu))
+
+
+
+
+
 screen custom_navigation():
 
     vbox:

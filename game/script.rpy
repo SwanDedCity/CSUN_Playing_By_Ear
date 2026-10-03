@@ -3,24 +3,24 @@
 # Define character images
 
 # chase
-image c neutral = Transform("chase_neutral.PNG")
-image c happy = Transform("chase_happy.PNG")
-image c surprised = Transform("chase_surprised.PNG")
-image c upset = Transform("chase_upset.PNG")
-image c grumpy = Transform("chase_grumpy.PNG")
+image c neutral = Transform("sprites/chase_neutral.PNG")
+image c happy = Transform("sprites/chase_happy.PNG")
+image c surprised = Transform("sprites/chase_surprised.PNG")
+image c upset = Transform("sprites/chase_upset.PNG")
+image c grumpy = Transform("sprites/chase_grumpy.PNG")
 
 # chase formal
-image c neutral formal = Transform("chase_neutral_formal.PNG")
-image c happy formal = Transform("chase_happy_formal.PNG")
-image c surprised formal = Transform("chase_surprised_formal.PNG")
-image c upset formal = Transform("chase_upset_formal.PNG")
-image c grumpy formal = Transform("chase_grumpy_formal.PNG")
+image c neutral formal = Transform("sprites/chase_neutral_formal.PNG")
+image c happy formal = Transform("sprites/chase_happy_formal.PNG")
+image c surprised formal = Transform("sprites/chase_surprised_formal.PNG")
+image c upset formal = Transform("sprites/chase_upset_formal.PNG")
+image c grumpy formal = Transform("sprites/chase_grumpy_formal.PNG")
 
  # mom placeholder
-image m = Transform("mom.png")
+image m = Transform("sprites/mom.png")
 
 # sirenbird
-image s neutral = Transform("sirenbird.PNG", xalign=0.5, yalign=0.5)
+image s neutral = Transform("sprites/sirenbird.PNG", xalign=0.5, yalign=0.5)
 
 # Define characters for dialogue
 define c = Character("Chase")
@@ -59,8 +59,8 @@ label start:
     ##
     define intro_puzzle = {
     "items": [
-       {"id": "piano", "image": "images/piano.png", "x": 300, "y": 450},
-       {"id": "drums", "image": "images/drums.png", "x": 1150, "y": 500}
+       {"id": "piano", "image": "items/piano.png", "x": 300, "y": 450},
+       {"id": "drums", "image": "items/drums.png", "x": 1150, "y": 500}
     ],
     "solution": ["drums", "piano"]
     }
