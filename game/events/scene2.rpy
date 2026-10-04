@@ -29,7 +29,7 @@ label scene2_start:
     "A very warm and motherly smile greeted him."
 
     show c happy at left
-    show m at right
+    show m happy at right
     
     m "Chase, I'm so glad you could make it"
 
@@ -37,10 +37,15 @@ label scene2_start:
     "Chase nodded his head down and greeted back with a smile, albeit a slightly sheepish one."
     c "Good afternoon, Mrs. mom how are you holding up?"
 
+    show m sadSmile at right
+
     "The smile remained, but the warmth on Mrs. (blanks) face faded." 
     "Her eyes peered off."
     m "Oh, we are all doing our best. Trying to make sense of what's happening."
     m "I appreciate the concern, but please don't worry too much about me." 
+
+    show m happy at right
+
     m "Please come on in, I have some tea if you'd like."
 
     "Chase gave a thank you and entered the once familiar house." 
@@ -59,25 +64,31 @@ label scene2_start:
     "The voice of Timothy's mother snapped him back to their conversation."
 
     show c neutral at left
-    show m at right
+    show m neutral at right
 
     m "He had been calling and sending photos the past few years. However, he never did visit. He must had been busy with school just like you were."
 
-    # need to add updated eyebrow raise image here, WIP
+    # note for self (Jonah): add updated eyebrow raise image here?
 
     "Chase's eyebrows began to knit in confusion."
 
     c "But Mrs. (blank), did you not say Timmy never did end up going to college?"
 
+    show m concerned at right
+
     "Timothy's mother, now realizing her mistake, was briefly dumbounded."
 
     m "Ah. yes, sorry."
+
+    show m sadSmile at right
 
     "She smiled apolegetically."
 
     m "It seems these past 4 years, we thought our Timmy was going to school with you." 
     m "It's just hard to see it otherwise when he had been calling us this entire time. Talking about all the things he'd been learning and doing at school."
     m "Maybe he was lying this whole time or-"
+
+    show m concerned at right
 
     "Timothy's mother began to drift off with a look of concern."
     "Chase asked,"
@@ -93,6 +104,9 @@ label scene2_start:
     "Timothy's mother tried looking for what to say next, but was too occupied trying to answer the questions on her mind."
     "As they came across a door on the second floor, they both came to a stop."
     "Timothy's mother opened the door."
+
+    show m neutral at right
+
     m "This is his room. We've kept it untouched for the most part, since he's left."
 
     "Chase found it difficult to enter the room."
@@ -102,7 +116,7 @@ label scene2_start:
     scene timmy_bedroom with fade
 
     show c neutral at left
-    show m at right
+    show m neutral at right
 
 
     "Chase commented,"
