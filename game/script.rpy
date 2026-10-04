@@ -16,7 +16,13 @@ image c surprised formal = Transform("sprites/chase_surprised_formal.PNG")
 image c upset formal = Transform("sprites/chase_upset_formal.PNG")
 image c grumpy formal = Transform("sprites/chase_grumpy_formal.PNG")
 
- # mom placeholder
+# mom
+image m neutral = Transform("sprites/mom_neutral.PNG")
+image m happy = Transform("sprites/mom_happy.PNG")
+image m concerned = Transform("sprites/mom_concerned.PNG")
+image m sadSmile = Transform("sprites/mom_sadSmile.PNG")
+
+# mom placeholder
 image m = Transform("sprites/mom.png")
 
 # sirenbird
