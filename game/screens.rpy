@@ -354,29 +354,31 @@ style navigation_button_text:
 
 screen main_menu():
 
-    ## This ensures that any other menu screen is replaced.
-    tag menu
+    
+    use custom_main_menu
+    # ## This ensures that any other menu screen is replaced.
+    # tag menu
 
-    add gui.main_menu_background
+    # add gui.main_menu_background
 
-    ## This empty frame darkens the main menu.
-    frame:
-        style "main_menu_frame"
+    # ## This empty frame darkens the main menu.
+    # frame:
+    #     style "main_menu_frame"
 
-    ## The use statement includes another screen inside this one. The actual
-    ## contents of the main menu are in the navigation screen.
-    use custom_navigation_main
+    # ## The use statement includes another screen inside this one. The actual
+    # ## contents of the main menu are in the navigation screen.
+    # use navigation_main
 
-    if gui.show_name:
+    # if gui.show_name:
 
-        vbox:
-            style "main_menu_vbox"
+    #     vbox:
+    #         style "main_menu_vbox"
 
-            text "[config.name!t]":
-                style "main_menu_title"
+    #         text "[config.name!t]":
+    #             style "main_menu_title"
 
-            text "[config.version]":
-                style "main_menu_version"
+    #         text "[config.version]":
+    #             style "main_menu_version"
 
 
 style main_menu_frame is empty
@@ -420,75 +422,77 @@ style main_menu_version:
 
 screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
 
-    # on "show" action [ShowMenu("custom_game_menu"), Hide()]
-    style_prefix "game_menu"
+    use custom_game_menu
 
-    if main_menu:
-        add gui.main_menu_background
-    else:
-        add gui.game_menu_background
+    # style_prefix "game_menu"
 
-    frame:
-        style "game_menu_outer_frame"
 
-        hbox:
+    # if main_menu:
+    #     add gui.main_menu_background
+    # else:
+    #     add gui.game_menu_background
 
-            ## Reserve space for the navigation section.
-            frame:
-                style "game_menu_navigation_frame"
+    # frame:
+    #     style "game_menu_outer_frame"
 
-            frame:
-                style "game_menu_content_frame"
+    #     hbox:
 
-                if scroll == "viewport":
+    #         ## Reserve space for the navigation section.
+    #         frame:
+    #             style "game_menu_navigation_frame"
 
-                    viewport:
-                        yinitial yinitial
-                        scrollbars "vertical"
-                        mousewheel True
-                        draggable True
-                        pagekeys True
+    #         frame:
+    #             style "game_menu_content_frame"
 
-                        side_yfill True
+    #             if scroll == "viewport":
 
-                        vbox:
-                            spacing spacing
+    #                 viewport:
+    #                     yinitial yinitial
+    #                     scrollbars "vertical"
+    #                     mousewheel True
+    #                     draggable True
+    #                     pagekeys True
 
-                            transclude
+    #                     side_yfill True
 
-                elif scroll == "vpgrid":
+    #                     vbox:
+    #                         spacing spacing
 
-                    vpgrid:
-                        cols 1
-                        yinitial yinitial
+    #                         transclude
 
-                        scrollbars "vertical"
-                        mousewheel True
-                        draggable True
-                        pagekeys True
+    #             elif scroll == "vpgrid":
 
-                        side_yfill True
+    #                 vpgrid:
+    #                     cols 1
+    #                     yinitial yinitial
 
-                        spacing spacing
+    #                     scrollbars "vertical"
+    #                     mousewheel True
+    #                     draggable True
+    #                     pagekeys True
 
-                        transclude
+    #                     side_yfill True
 
-                else:
+    #                     spacing spacing
 
-                    transclude
+    #                     transclude
 
-    use navigation
-    # use custom_navigation
+    #             else:
 
-    textbutton _("Return"):
-        style "return_button"
+    #                 transclude
 
-        action Return()
+    # use navigation
+    # # use custom_navigation
 
-    label title
+    # textbutton _("Return"):
+    #     style "return_button"
 
-    if main_menu:
-        key "game_menu" action ShowMenu("main_menu")
+    #     action Return()
+
+    # label title
+
+    # if main_menu:
+    #     key "game_menu" action ShowMenu("main_menu")
 
 
 style game_menu_outer_frame is empty

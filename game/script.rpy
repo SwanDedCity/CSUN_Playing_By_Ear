@@ -55,7 +55,7 @@ label start:
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
-    scene bg room
+    scene stage_lights
 
     # This shows a character sprite. 
 
