@@ -1,3 +1,7 @@
+init python:
+    renpy.music.register_channel("instrument1", "sfx", loop=False)
+    renpy.music.register_channel("instrument2", "sfx", loop=False)
+    renpy.music.register_channel("instrument3", "sfx", loop=False)
 # screen music_puzzle(puzzle):
 
 #     modal True
@@ -131,14 +135,21 @@ screen music_puzzle(puzzle):
             timer 1.0 action SetScreenVariable("play_button", False)
             timer 1.0 action [SetScreenVariable("chosen", []), SetScreenVariable("hovered_item", None)]
 
+
         elif correct:
             text "yay you got it right"
-            timer 1.0 action SetScreenVariable("play_button", False)
-            timer 1.0 action Return(True)
+            timer 5.0 action [Stop("instrument1"), Stop("instrument2"), Stop("instrument3")]
+            timer 0.1 action [
+                Play("instrument1", "audio/music_mechanic/Demo/Guitar.mp3"),
+                Play("instrument2", "audio/music_mechanic/Demo/Vocals.mp3"),
+                Play("instrument3", "audio/music_mechanic/Demo/Strings.mp3")
+            ]
+            timer 5.1 action Return(True)
 
         else:
             text "click everthing first"
-            timer 1.0 action SetScreenVariable("play_button", False) 
+            timer 1.0 action [SetScreenVariable("play_button", False)]
+
 
     else:
         text "not yet"

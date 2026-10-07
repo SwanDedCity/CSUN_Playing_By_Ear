@@ -47,6 +47,7 @@ define scene_interlude = Fade(2.0, 0.5, 0.0)
 init python:
     renpy.music.register_channel("ringtone", mixer="sfx", loop=True)
 
+
 # The game starts here.
 
 label start:
@@ -72,10 +73,10 @@ label start:
     ##
     define intro_puzzle = {
     "items": [
-       {"id": "piano", "image": "items/piano.png", "x": 300, "y": 450},
-       {"id": "drums", "image": "items/drums.png", "x": 1150, "y": 500}
+       {"id": "Guitar", "image": "items/piano.png", "x": 300, "y": 450},
+       {"id": "Vocals", "image": "items/drums.png", "x": 1150, "y": 500}
     ],
-    "solution": ["drums", "piano"]
+    "solution": ["Guitar", "Vocals"]
     }
     call screen music_puzzle(intro_puzzle)
 
