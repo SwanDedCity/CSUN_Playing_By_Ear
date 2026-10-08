@@ -180,85 +180,91 @@ screen custom_main_menu_load():
     use main_menu_button(0.423, 0.1, "Back", Show("custom_main_menu", transform=load_to_title)) 
     use custom_load
 
-screen custom_settings():
-    vbox:
+screen custom_settings(pos):
 
-        hbox:
-            box_wrap True
+    drag:
+        pos pos
 
-            if renpy.variant("pc") or renpy.variant("web"):
+        vbox:
+
+            hbox:
+                box_wrap True
+
+                if renpy.variant("pc") or renpy.variant("web"):
+
+                    vbox:
+                        style_prefix "radio"
+                        label _("Display")
+                        textbutton _("Window") action Preference("display", "window")
+                        textbutton _("Fullscreen") action Preference("display", "fullscreen")
 
                 vbox:
-                    style_prefix "radio"
-                    label _("Display")
-                    textbutton _("Window") action Preference("display", "window")
-                    textbutton _("Fullscreen") action Preference("display", "fullscreen")
+                    style_prefix "check"
+                    label _("Skip")
+                    textbutton _("Unseen Text") action Preference("skip", "toggle")
+                    textbutton _("After Choices") action Preference("after choices", "toggle")
+                    textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
 
-            vbox:
-                style_prefix "check"
-                label _("Skip")
-                textbutton _("Unseen Text") action Preference("skip", "toggle")
-                textbutton _("After Choices") action Preference("after choices", "toggle")
-                textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
+                ## Additional vboxes of type "radio_pref" or "check_pref" can be
+                ## added here, to add additional creator-defined preferences.
 
-            ## Additional vboxes of type "radio_pref" or "check_pref" can be
-            ## added here, to add additional creator-defined preferences.
+            null height (4 * gui.pref_spacing)
 
-        null height (4 * gui.pref_spacing)
+            hbox:
+                style_prefix "slider"
+                box_wrap True
 
-        hbox:
-            style_prefix "slider"
-            box_wrap True
+                vbox:
 
-            vbox:
+                    label _("Text Speed")
 
-                label _("Text Speed")
+                    bar value Preference("text speed")
 
-                bar value Preference("text speed")
+                    label _("Auto-Forward Time")
 
-                label _("Auto-Forward Time")
+                    bar value Preference("auto-forward time")
 
-                bar value Preference("auto-forward time")
+                vbox:
 
-            vbox:
+                    if config.has_music:
+                        label _("Music Volume")
 
-                if config.has_music:
-                    label _("Music Volume")
+                        hbox:
+                            bar value Preference("music volume")
 
-                    hbox:
-                        bar value Preference("music volume")
+                    if config.has_sound:
 
-                if config.has_sound:
+                        label _("Sound Volume")
 
-                    label _("Sound Volume")
+                        hbox:
+                            bar value Preference("sound volume")
 
-                    hbox:
-                        bar value Preference("sound volume")
-
-                        if config.sample_sound:
-                            textbutton _("Test") action Play("sound", config.sample_sound)
+                            if config.sample_sound:
+                                textbutton _("Test") action Play("sound", config.sample_sound)
 
 
-                if config.has_voice:
-                    label _("Voice Volume")
+                    if config.has_voice:
+                        label _("Voice Volume")
 
-                    hbox:
-                        bar value Preference("voice volume")
+                        hbox:
+                            bar value Preference("voice volume")
 
-                        if config.sample_voice:
-                            textbutton _("Test") action Play("voice", config.sample_voice)
+                            if config.sample_voice:
+                                textbutton _("Test") action Play("voice", config.sample_voice)
 
-                if config.has_music or config.has_sound or config.has_voice:
-                    null height gui.pref_spacing
+                    if config.has_music or config.has_sound or config.has_voice:
+                        null height gui.pref_spacing
 
-                    textbutton _("Mute All"):
-                        action Preference("all mute", "toggle")
-                        style "mute_all_button"
+                        textbutton _("Mute All"):
+                            action Preference("all mute", "toggle")
+                            style "mute_all_button"
 screen custom_main_menu_settings():
     add "gui/custom_gui/c_main_menu.png":
         at title_to_settings
     use main_menu_button(0.423, 0, "Back", Show("custom_main_menu", transform=settings_to_title))
-    use custom_settings
+
+    frame:
+        use custom_settings((500, 500))
 
 screen custom_main_menu_quit():
     add "gui/custom_gui/c_main_menu.png":
@@ -447,9 +453,10 @@ screen custom_game_menu_load():
         use main_menu_button(0.03, 0.693, "Close", Return())
 
 screen custom_game_menu_settings():
+    add "gui/custom_gui/c_game_menu_box.png"
     add "gui/custom_gui/c_game_menu_tint.png"
     add "gui/custom_gui/c_game_menu.png"
-    use custom_settings
+    use custom_settings((600, 200))
     fixed:
         use main_menu_button(0.03, 0.242, "History", Show("custom_game_menu_history"))
         use main_menu_button(0.03, 0.324, "Save Game", Show("custom_game_menu_save"))

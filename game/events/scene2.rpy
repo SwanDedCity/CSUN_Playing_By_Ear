@@ -30,7 +30,7 @@ label scene2_start:
 
     show c happy at left
     show m happy at right
-    
+
     m "Chase, I'm so glad you could make it"
 
     "Chase could barely note the tired look in her eyes."
