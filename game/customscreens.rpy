@@ -180,10 +180,10 @@ screen custom_main_menu_load():
     use main_menu_button(0.423, 0.1, "Back", Show("custom_main_menu", transform=load_to_title)) 
     use custom_load
 
-screen custom_settings(pos):
+screen custom_settings():
 
-    drag:
-        pos pos
+    frame:
+        background None
 
         vbox:
 
@@ -264,7 +264,12 @@ screen custom_main_menu_settings():
     use main_menu_button(0.423, 0, "Back", Show("custom_main_menu", transform=settings_to_title))
 
     frame:
-        use custom_settings((500, 500))
+        background None
+        align (1.1, 0.5)
+        use custom_settings
+        
+
+    
 
 screen custom_main_menu_quit():
     add "gui/custom_gui/c_main_menu.png":
@@ -456,7 +461,10 @@ screen custom_game_menu_settings():
     add "gui/custom_gui/c_game_menu_box.png"
     add "gui/custom_gui/c_game_menu_tint.png"
     add "gui/custom_gui/c_game_menu.png"
-    use custom_settings((600, 200))
+    frame:
+        background None
+        use custom_settings
+        align (1.1, 0.5)
     fixed:
         use main_menu_button(0.03, 0.242, "History", Show("custom_game_menu_history"))
         use main_menu_button(0.03, 0.324, "Save Game", Show("custom_game_menu_save"))
