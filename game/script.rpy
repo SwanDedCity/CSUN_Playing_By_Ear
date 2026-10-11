@@ -65,7 +65,7 @@ label start:
 
     # These display lines of dialogue.
 
-    c "This is the of beginning script.rpy. Don't mind the bird's position, I'll change that later lol"
+    c "This is the of beginning script.rpy."
 
 
     #THIS IS A TEST OF THE MUSIC PUZZLE SCREEN. UNCOMMENT THE LINES BELOW TO TEST IT
