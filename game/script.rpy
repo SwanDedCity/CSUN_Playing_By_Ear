@@ -22,16 +22,16 @@ image m happy = Transform("sprites/mom_happy.PNG")
 image m concerned = Transform("sprites/mom_concerned.PNG")
 image m sadSmile = Transform("sprites/mom_sadSmile.PNG")
 
-# mom placeholder
-image m = Transform("sprites/mom.png")
-
-# sirenbird placeholder
+# sirenbird
 image b happy = Transform("sprites/bird_happy.PNG")
 image b surprised = Transform("sprites/bird_surprised.PNG")
 image b sad = Transform("sprites/bird_sad.PNG")
 image b covered = Transform("sprites/bird_covered.PNG")
 
-# siren older placeholder
+# mom placeholder
+image m = Transform("sprites/mom.png")
+
+# siren placeholder
 image s neutral = Transform("sprites/sirenbird.PNG", xalign=0.5, yalign=0.5)
 
 # Define characters for dialogue
