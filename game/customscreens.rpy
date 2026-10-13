@@ -584,3 +584,15 @@ screen custom_about():
                 text "[gui.about!t]\n"
 
             text _("Made with bwababa {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
+
+default player_input = ""
+screen computer_password():
+    fixed:
+        add "gui/custom_gui/computer/computer_password.png"
+        vbox:
+            text "Enter password:"
+            input:
+                value VariableInputValue("player_input")
+                action Return(player_input)
+            align (0.5, 0.5)
+            

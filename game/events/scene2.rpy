@@ -250,6 +250,7 @@ label guitar:
                 "Although I do recall the message behind it reading: blank"
                 jump investRoom
 
+image computer_main = "gui/custom_gui/computer/computer_main.png"
 label computer:
         "An old computer from the early 2000s is tucked against the wall."
         "Chase moved some hats and shirts that were strewn on top of the monitor."
@@ -258,7 +259,9 @@ label computer:
         "He found the mouse and keyboard buried beneath a pile consisting of music sheets, a metronome, and many guitar picks."
         c "{i}Who knows, maybe it has info on Tim. Let's turn on this bad boy."
 
-        play sound "computer startup.mp3"
+
+        window hide
+        scene computer_main with fade
 
         #add interface l8r
 
@@ -268,15 +271,17 @@ label computer:
         "Just fine until it startled Chase with distorted audio and a glitchy screen."
         c "Did this computer always do this?"
         "The computer then began to flicker a warped screen prompting him for a password."
+        window hide
+        # show screen computer_password
+        $ player_input = renpy.call_screen("computer_password");
 
         python:
-                password = renpy.input("Enter password:")
-                if password == "blank":
+                if player_input == "blank":
                         renpy.jump("computerAccept")
                 else:
                         renpy.jump("computerReject")
 label computerAccept:
-        "YAY. You have made it into the computer"
+        "YAY. You have made it into the computer [player_input]"
         jump investRoom
 label computerReject:
         c "Seems I don't have an idea what it could be."
