@@ -282,12 +282,27 @@ label computer:
                         renpy.jump("computerReject")
 label computerAccept:
         "YAY. You have made it into the computer [player_input]"
-        jump investRoom
+        show screen computer_home
+        pause
+        jump enterFantasy
 label computerReject:
         c "Seems I don't have an idea what it could be."
         c "Maybe I can find a clue somewhere in this room."
         jump investRoom
 
 
+
+label enterFantasy:
+        hide screen computer_music
+        c "Oh yeah, thath's how it sounded. Somehow, it makes me feel better..."
+        scene white with dissolve
+        c "Huh?"
+        w "If the world could hear your music the way I can, you'd make everyone feel better. Your music is that good!"
+        "The room starts to spin as the monitor’s screen becomes sickeningly brighter. Even the song Chase is listening to starts to sound distorted"
+        c "What's this feeling? Why does my chest hurt? And my head-"
+        "Chase held up the palm of his hand to his head."
+        c "Uhh. I don't feel so well."
+        scene black with scene_interlude
+        jump scene3_start
 #jump endGame
 
