@@ -32,17 +32,18 @@ image b covered = Transform("sprites/bird_covered.PNG")
 
 # memory
 image memory blue:
-    "items/memory.PNG"
+    "items/memory mono.PNG"
+    matrixcolor ColorizeMatrix("00DCFF", "FFFFFF")
     
 image memory yellow:
-    "items/memory.PNG"
-    matrixcolor HueMatrix(240.0)
+    "items/memory mono.PNG"
+    matrixcolor ColorizeMatrix("E6FF00", "FFFFFF")
 
 image memory red:
-    "items/memory.PNG"
-    matrixcolor HueMatrix(160.0) * BrightnessMatrix(-0.9) * ContrastMatrix(2.5)  
+    "items/memory mono.PNG"
+    matrixcolor ColorizeMatrix("FF0000", "FFFFFF")
 
-# unused: TintMatrix("#FF0000") 
+# unused: TintMatrix("#FF0000"), HueMatrix(240.0), HueMatrix(160.0) * BrightnessMatrix(-0.9) * ContrastMatrix(2.5)
 
 # Define characters for dialogue
 define c = Character("Chase")
@@ -70,11 +71,11 @@ label start:
     # This shows a character sprite. 
 
     show c happy at left
-    show memory red at right
+    show memory blue at right
 
     # These display lines of dialogue.
 
-    c "This is the of beginning script.rpy."
+    c "This is the of beginning script.rpy. (Currently trying to make the blue pop more on this memory...)"
 
 
     #THIS IS A TEST OF THE MUSIC PUZZLE SCREEN. UNCOMMENT THE LINES BELOW TO TEST IT
