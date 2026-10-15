@@ -28,8 +28,21 @@ image b surprised = Transform("sprites/bird_surprised.PNG")
 image b sad = Transform("sprites/bird_sad.PNG")
 image b covered = Transform("sprites/bird_covered.PNG")
 
-# Define item images
-image i memory = Transform("items/memory.PNG")
+# Define item images (if needed)
+
+# memory
+image memory blue:
+    "items/memory.PNG"
+    
+image memory yellow:
+    "items/memory.PNG"
+    matrixcolor HueMatrix(240.0)
+
+image memory red:
+    "items/memory.PNG"
+    matrixcolor HueMatrix(160.0) * BrightnessMatrix(-0.9) * ContrastMatrix(2.5)  
+
+# unused: TintMatrix("#FF0000") 
 
 # Define characters for dialogue
 define c = Character("Chase")
@@ -37,7 +50,6 @@ define w = Character("???")
 define m = Character("Timothy's mother")
 
 # Other definitions
-
 define scene_interlude = Fade(2.0, 0.5, 0.0)
 
  #Custom Audio Channels
@@ -58,7 +70,7 @@ label start:
     # This shows a character sprite. 
 
     show c happy at left
-    show b happy at right
+    show memory red at right
 
     # These display lines of dialogue.
 
