@@ -109,7 +109,7 @@ label scene2_start:
 
     m "This is his room. We've kept it untouched for the most part, since he's left."
 
-    show c neutral at left
+    show c serious at left
 
     "Chase found it difficult to enter the room."
     "He felt hesitant, like he needed Timothy's permission before entering."
@@ -129,19 +129,23 @@ label scene2_start:
 
     "Chase stopped walking for a moment."
 
-    "He squinted his eyes."
-
     show c serious at left
+
+    "He squinted his eyes."
 
     c "Gee, I can't remember."
 
     "He did not realize Timothy's mother walking out of the room until she spoke to him from the doorway."
+
+    show c up at left
 
     m "I'll be back in a moment, but please take a look around."
     m "Feel free to check anything you'd like. I'm just hoping it'll give you an idea or clue as to what happened to my boy."
     m "The computer on the table still works, but I can't quite figure out the password."
 
     "Timothy's mother smiled a goodbye and walked off; leaving Chase in a room he would never have imagined himself back in."
+
+    show c neutral at left
 
     c "{i}What happened all those years ago?{/i}"
 
