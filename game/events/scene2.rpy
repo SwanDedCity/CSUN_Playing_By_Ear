@@ -117,7 +117,7 @@ label scene2_start:
 
     scene timmy_bedroom with fade
 
-    show c up at left
+    show c neutral at left
     show m neutral at right
 
 
@@ -131,7 +131,7 @@ label scene2_start:
 
     "He squinted his eyes."
 
-    show c neutral at left
+    show c serious at left
 
     c "Gee, I can't remember."
 
@@ -224,9 +224,11 @@ label guitar:
         if bool(clickedGuitar) is False:
                 "Although the room was littered with all sorts of intruments. From a keyboard, to a small set of drums, and even a cello." 
                 "There was one instrument that really caught Chase's eye."
+                show c serious at left
                 c "What happened to Tim."
                 "He seemed to be asking himself."
                 c "Why didn't he go to (music university)?"
+                show c neutral at left
                 c "He was so talented, he could pick up and play anything thrown at him. He put in so much time and effort too." 
                 c "I mean, even the people I just played with at the concert hall could not hold a candle to him."
                 "It felt like the guitar was not acknlowledghing Chase. Looking past him."
@@ -266,9 +268,11 @@ image computer_main = "gui/custom_gui/computer/computer_main.png"
 label computer:
         "An old computer from the early 2000s is tucked against the wall."
         "Chase moved some hats and shirts that were strewn on top of the monitor."
+        show c serious at left
         c "{i}Something about this computer bothers me. I mean it's old and yellow.{/i}"
         "He sat down on a chair and scooted himself close to the computer."
         "He found the mouse and keyboard buried beneath a pile consisting of music sheets, a metronome, and many guitar picks."
+        show c neutral at left
         c "{i}Who knows, maybe it has info on Tim. Let's turn on this bad boy."
 
 

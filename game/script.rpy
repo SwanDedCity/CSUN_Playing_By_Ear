@@ -13,6 +13,7 @@ image c exasp = Transform("sprites/chase_exasp.PNG")
 image c hurt = Transform("sprites/chase_hurt.PNG")
 image c tired = Transform("sprites/chase_tired.PNG")
 image c smug = Transform("sprites/chase_smug.PNG")
+image c serious = Transform("sprites/chase_serious.PNG")
 
 # chase formal
 image c neutral formal = Transform("sprites/chase_neutral_formal.PNG")
