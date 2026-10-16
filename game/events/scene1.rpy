@@ -103,6 +103,8 @@ label scene1_start:
     stop ringtone
     "Chase answered."
 
+    show c serious formal at left
+
     c "Hey, why do you guys keep calling me?"
 
     "The voice of a woman answered with relief."
@@ -144,7 +146,7 @@ label scene1_start:
     "Now resurfacing to his mind, as if it had been stuck at the bottom of a seabed for years."
     "From this vacuum of nothing he was cast to, he could faintly hear the woman continue to talk."
 
-    show c neutral formal at left
+    show c serious formal at left
 
     w "I apologize if you are busy, but please listen." 
     w "My dear Timmy is gone." 

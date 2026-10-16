@@ -22,6 +22,7 @@ image c happy formal = Transform("sprites/chase_happy_formal.PNG")
 image c surprised formal = Transform("sprites/chase_surprised_formal.PNG")
 image c upset formal = Transform("sprites/chase_upset_formal.PNG")
 image c grumpy formal = Transform("sprites/chase_grumpy_formal.PNG")
+image c serious formal = Transform("sprites/chase_serious_formal.PNG")
 
 # mom
 image m neutral = Transform("sprites/mom_neutral.PNG")
