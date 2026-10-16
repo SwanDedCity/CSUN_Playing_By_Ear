@@ -93,7 +93,7 @@ screen music_puzzle(puzzle):
         xoffset -85
         spacing 20
 
-        # Play button
+        # play button
         imagebutton:
             idle Transform("gui/music_mechanic/play_idle.png", zoom=1)
             hover Transform("gui/music_mechanic/play_hover.png", zoom=1)
@@ -101,7 +101,7 @@ screen music_puzzle(puzzle):
             focus_mask True
             action SetScreenVariable("play_button", True)
 
-        # Music tracks
+        # music tracks
         vbox:
             yalign 0.5
             spacing track_spacing

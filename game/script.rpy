@@ -61,7 +61,7 @@ define m = Character("Timothy's mother")
 # Other definitions
 define scene_interlude = Fade(2.0, 0.5, 0.0)
 
- #Custom Audio Channels
+#Custom Audio Channels
 init python:
     renpy.music.register_channel("ringtone", mixer="sfx", loop=True)
 
@@ -91,10 +91,10 @@ label start:
     ##
     define intro_puzzle = {
     "items": [
-       {"id": "Guitar", "image": "items/piano.png", "x": 300, "y": 450},
-       {"id": "Vocals", "image": "items/drums.png", "x": 1150, "y": 500}
+        {"id": "Guitar", "image": "items/piano.png", "x": 300, "y": 450},
+        {"id": "Drums", "image": "items/drums.png", "x": 1150, "y": 500}
     ],
-    "solution": ["Guitar", "Vocals"]
+    "solution": ["Guitar", "Drums"]
     }
     call screen music_puzzle(intro_puzzle)
 
