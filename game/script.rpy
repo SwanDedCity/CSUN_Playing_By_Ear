@@ -12,10 +12,11 @@ image c grumpy = Transform("sprites/chase_grumpy.PNG")
 image c exasp = Transform("sprites/chase_exasp.PNG")
 image c hurt = Transform("sprites/chase_hurt.PNG")
 image c tired = Transform("sprites/chase_tired.PNG")
-
+image c smug = Transform("sprites/chase_smug.PNG")
 
 # chase formal
 image c neutral formal = Transform("sprites/chase_neutral_formal.PNG")
+image c up formal = Transform("sprites/chase_up_formal.PNG")
 image c happy formal = Transform("sprites/chase_happy_formal.PNG")
 image c surprised formal = Transform("sprites/chase_surprised_formal.PNG")
 image c upset formal = Transform("sprites/chase_upset_formal.PNG")

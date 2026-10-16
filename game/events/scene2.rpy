@@ -68,7 +68,7 @@ label scene2_start:
 
     m "He had been calling and sending photos the past few years. However, he never did visit. He must had been busy with school just like you were."
 
-    # note for self (Jonah): add updated eyebrow raise image here?
+    show c up at left
 
     "Chase's eyebrows began to knit in confusion."
 
@@ -109,13 +109,15 @@ label scene2_start:
 
     m "This is his room. We've kept it untouched for the most part, since he's left."
 
+    show c neutral at left
+
     "Chase found it difficult to enter the room."
     "He felt hesitant, like he needed Timothy's permission before entering."
     "He shrugged it off and entered the room."
 
     scene timmy_bedroom with fade
 
-    show c neutral at left
+    show c up at left
     show m neutral at right
 
 
@@ -128,6 +130,8 @@ label scene2_start:
     "Chase stopped walking for a moment."
 
     "He squinted his eyes."
+
+    show c neutral at left
 
     c "Gee, I can't remember."
 
@@ -150,6 +154,7 @@ label scene2_start:
 label investRoom:
     window hide
     show screen room_main_interact
+    show c neutral at left
     pause
     jump investRoom
 
@@ -191,6 +196,7 @@ label stuffedAnimal:
 label basketball:
         #To do: easter egg basketball shot
         show screen hoop
+        show c happy at left
         c "{i}Cool a basketball!{/i}"
         c "{i}I can't imagine Timmy playing outside. He was always here in his room practicing with his instruments.{/i}"
         hide screen hoop
@@ -204,10 +210,13 @@ screen hoop():
                 action Jump("hoop"), renpy.hide_screen("room_main_interact")
 
 label hoop:
+        show c smug at left
         c "I think I have time for a swish."
+        hide c
         "Chase tossed the basketball across the room."
         "It was a fabulous miss!"
         "It made Chase wince in silence."
+        show c hurt at left
         c "I'm getting distracted. The ball was deflated anyways."
         jump investRoom
 
@@ -226,11 +235,14 @@ label guitar:
                 menu:
                         "Touch the guitar.":
                                 $ clickedGuitar = 1;
+                                hide c
                                 "BAM!"
                                 "Before Chase could even decide to play the guitar, it fell from its hook on the wall."
                                 "The strings played out in a wail."
+                                show c exasp at left
                                 c "SHOOT!"
                                 "Chase ran to the guitar; looking for any damage."
+                                show c neutral at left
                                 c "Huh. Seems to be alright. Just a dramatic fall."
                                 "As he picked it up, he noticed a sticky note fell from the back of the guitar."
                                 c "Wait. What is this?"

@@ -109,7 +109,7 @@ label scene1_start:
 
     w "Chase? Is that really you, Chase?"
 
-    show c neutral formal at left
+    show c up formal at left
     
     "Chase was taken aback for a moment."
     "Her voice sounded familiar to him."
@@ -118,6 +118,8 @@ label scene1_start:
     c "Yes, yes, this is Chase."
 
     "Now holding the phone with both hands."
+
+    show c neutral formal at left
 
     c "I'm sorry but I can't recall who this is."
 
